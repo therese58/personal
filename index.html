@@ -42,18 +42,26 @@
   <header id="header" class="header d-flex align-items-center position-relative">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo.png" class="me-0" alt="AgriCulture">
+      <style type="text/css">
+        .st0{fill:#E21010; display: none;}
+        @media (max-width:990px) {
+          .st0{ display: block;}  
+          .logo svg path:not(.st0){ display: none;}        
+        }
+      </style>
+
+      <a href="index.html" class="logo d-flex align-items-center col-2 border">
+        <!-- svg가  이미지소스로 쓰이기 위해서는 반드시 html5 여야함 -->
+        <img src="kcr/LOGO.svg" class="me-0" alt="logo">
         <!-- <h1 class="sitename">AgriCulture</h1>  -->
       </a>
 
       <nav id="navmenu" class="navmenu flex-grow-1">
         <ul class="justify-content-between">
-          <li class="order-5"><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Our Services</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">병원소개</a></li>
+          <li><a href="services.html">진료과목</a></li>
+          <li><a href="testimonials.html">고운누리연구소</a></li>
+          <li><a href="blog.html">고객센터</a></li>
           <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>
