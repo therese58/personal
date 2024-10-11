@@ -9,4 +9,22 @@ window.addEventListener('load',function(){
 
     mynavi.innerHTML = mytag;
   }
+
+  const myslide = this.document.querySelector("#hero-carousel div");
+
+  let slidetag = '';
+
+  for( y in slideData){
+
+    slidetag += `<div class="carousel-item">
+      <img src="${slideData[y].img}" alt="${slideData[y].alt}">
+      <div class="carousel-container">
+        <h2>${slideData[y].h2text}</h2>
+        <p>${slideData[y].ptext}</p>
+      </div>
+    </div>`;
+  
+    myslide.innerHTML = slidetag;
+  }
+
 })
