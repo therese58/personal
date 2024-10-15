@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', function() {
   for (let y in slideData) {
     slidetag += `<div class="carousel-item ${y == 0 ? 'active' : '' }">
         <img src="${slideData[y].img}" alt="${slideData[y].alt}">
-        <div class="carousel-container">
+        <div class="carousel-container container-xl">
           <h2>${slideData[y].h2text}</h2>
           <p>${slideData[y].ptext}</p>
         </div>

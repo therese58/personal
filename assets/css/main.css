@@ -12,8 +12,8 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Pretendard Variable","Noto Sans", sans-serif;
-  --heading-font: "Pretendard Variable",  sans-serif;
+  --default-font: "Pretendard Variable","Noto Serif KR", serif;
+  --heading-font: "Noto Serif KR",  sans-serif;
   --nav-font: "Pretendard Variable",  sans-serif;
 }
 
@@ -30,7 +30,7 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #212529;  /* The default color of the main navmenu links */
-  --nav-hover-color: #116530; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #A17A3B; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -46,8 +46,8 @@
 
 .dark-background {
   --background-color: #060606;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
+  --default-color: #303030;
+  --heading-color: #303030;
   --accent-color: #2ea359;
   --surface-color: #252525;
   --contrast-color: #ffffff;
@@ -76,6 +76,7 @@ a {
 a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
   text-decoration: none;
+  font-weight: bold !important;
 }
 
 h1,
@@ -265,6 +266,7 @@ h6 {
     display: flex;
     list-style: none;
     align-items: center;
+    justify-content: flex-end;
   }
 
   .navmenu li {
@@ -491,7 +493,7 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
+  color: #fff;
   background-color: var(--background-color);
   font-size: 14px;
   position: relative;
@@ -571,7 +573,7 @@ h6 {
 }
 
 .footer .footer-links ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: #fff;
   display: inline-block;
   line-height: 1;
 }
@@ -775,7 +777,7 @@ section,
 
 .section-title h2 {
   font-size: 28px;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 15px;
 }
 
@@ -822,7 +824,7 @@ section,
 
 .hero .carousel-item:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 60%);
+  /* background: color-mix(in srgb, var(--background-color), transparent 60%); */
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -833,14 +835,14 @@ section,
   inset: 90px 64px 64px 64px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   flex-direction: column;
   z-index: 3;
 }
 
 .hero h2 {
   margin-bottom: 30px;
-  font-size: 48px;
+  font-size: 72px;
   font-weight: 700;
   animation: fadeInDown 1s both;
 }
@@ -853,13 +855,15 @@ section,
 
 .hero p {
   animation: fadeInDown 1s both 0.2s;
+  font-size: 24px;
+  margin-bottom: 0.5rem !important;
 }
 
 @media (min-width: 1024px) {
 
   .hero h2,
   .hero p {
-    max-width: 60%;
+    /* max-width: 60%; */
   }
 }
 
@@ -909,9 +913,13 @@ section,
 
 .hero .carousel-control-next-icon,
 .hero .carousel-control-prev-icon {
-  background: none;
+ 
   font-size: 32px;
   line-height: 1;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#fff'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
 }
 
 .hero .carousel-indicators {

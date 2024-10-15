@@ -1,7 +1,7 @@
 const navidata = [
     {
         d1text : "병원소개",
-        d1href : "http://www.naver.com",
+        d1href : "#services section",
         __target :"_blank"
       },
     {
@@ -31,7 +31,7 @@ const navidata = [
       img : "/assets/img/hero_2.jpg",
       alt : "인증약재",
       h2text : "GAP 인증약재",
-      ptext : "고운누리는 깨끗하고 믿을 수 있는 한약을 위해 철저한 관리 시스템에 따라 인증된 약재만을 사용합니다.",
+      ptext : "고운누리는 깨끗하고 믿을 수 있는 한약을 위해<p>철저한 관리 시스템에 따라인증된 약재만을 사용합니다.",
     },
     {
       img : "/assets/img/hero_3.jpg",
