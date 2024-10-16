@@ -24,7 +24,7 @@ const navidata = [
     {
       img : "/assets/img/hero_1.jpg",
       alt : "고운누리",
-      h2text : "피부·면역 질환에는 고운누리",
+      h2text : "피부·면역 질환은 고운누리",
       ptext : "오로지 피부·면역 질환 치료를 위해 오랜 기간동안 쌓아온 고운누리만의 노하우",
     },
     {
