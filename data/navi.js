@@ -34,7 +34,7 @@ const navidata = [
       ptext : "고운누리는 깨끗하고 믿을 수 있는 한약을 위해<p>철저한 관리 시스템에 따라인증된 약재만을 사용합니다.",
     },
     {
-      img : "/assets/img/hero_3.jpg",
+      video : "/assets/img/Sequence _slow.mp4",
       alt : "맞춤한약",
       h2text : "개인 맞춤한약",
       ptext : "고운누리는 효과적인 치료를 위하여 개개인 맞춤 한약으로 처방합니다.",

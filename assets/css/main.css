@@ -17,9 +17,8 @@
   --nav-font: "Pretendard Variable",  sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --background-color: #ffffff;
   --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #2d465e; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #A17A3B; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -27,7 +26,6 @@
   --contrast-color: #252525; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #212529;  /* The default color of the main navmenu links */
   --nav-hover-color: #A17A3B; /* Applied to main navmenu links when they are hovered over or active */
@@ -36,8 +34,6 @@
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #A17A3B; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
-
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
   --background-color: #f9f9f9;
@@ -225,10 +221,16 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: transparent;
+  transition: var(--background-color) 0.3s;
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
+  position: fixed;
+}
+
+.header.scrolled {
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .header .logo {
@@ -277,7 +279,7 @@ h6 {
   .navmenu a:focus {
     color: var(--nav-color);
     padding: 18px 15px;
-    font-size: 16px;
+    font-size: 18px;
     font-family: var(--nav-font);
     font-weight: 400;
     display: flex;
@@ -289,7 +291,7 @@ h6 {
 
   .navmenu a i,
   .navmenu a:focus i {
-    font-size: 12px;
+    font-size: 18px;
     line-height: 0;
     margin-left: 5px;
     transition: 0.3s;
@@ -1052,14 +1054,13 @@ section,
 
 .img-container {
   display: flex;
-  flex-direction: column; /* 세로 정렬 */
-  align-items: right; /* 가운데 정렬 */
-  text-align: center;
-  margin-right: 5rem;
+  flex-direction: column;
+  align-items: flex-end; /* 가로 방향 오른쪽 정렬 */
+  text-align: right; /* 텍스트 오른쪽 정렬 */
+  margin-right: 5rem; /* 오른쪽에 여백 추가 */
 }
 
 .img-container img {
-  height: auto;
   margin-bottom: 10px; /* 이미지와 텍스트 사이 간격 */
 }
 
@@ -1069,25 +1070,23 @@ section,
   padding: 5rem 0;
 }
 
-/* .about .content .img-overlap {
-  margin-top: -150px;
-} */
+.about .img-overlap {
+  max-width: 100%;  /* 부모 컨테이너를 넘어가지 않도록 제한 */
+  width: auto;      /* 이미지가 자신의 본래 크기를 유지 */
+  height: auto;     /* 비율을 유지하면서 크기 조정 */
+}
 
 .about .img-rel {
   position: relative;
-  
 }
 
 .about .img-text {
   position: absolute;
   bottom: 5%; /* 이미지 하단 위에 위치 */
-  left: -5%;
+  left: 10%;
   transform: translateX(0%);
-  color: white; /* 텍스트 색상 */
-  text-align: left;
   z-index: 10; /* 이미지 위에 오도록 */
   font-size: 24px;
-  font-weight: bold;
 }
 
 .about .content-title {
@@ -1109,7 +1108,6 @@ section,
   text-align: right;
   font-size: 24px;
   font-weight: 700;
-  margin-right: 2rem;
   margin-top: 2rem;
 }
 
@@ -1127,6 +1125,10 @@ section,
   text-transform: uppercase;
   font-size: 1.3rem;
   margin-bottom: 1rem;
+}
+
+.about .carousel-indicators {
+  list-style: none;
 }
 
 /*--------------------------------------------------------------

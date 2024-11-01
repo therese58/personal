@@ -1,3 +1,13 @@
+window.addEventListener("scroll", function() {
+  const header = document.getElementById("header");
+  // 스크롤이 50px 이상 내려가면 색상 변경, 아니면 원래 색상
+  if (window.scrollY > 50) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+
 window.addEventListener('DOMContentLoaded', function() {
 
   const mynavi = this.document.querySelector("#navmenu ul"); //배열형 데이터 아님!
@@ -15,10 +25,9 @@ window.addEventListener('DOMContentLoaded', function() {
   let slidetag = '';
 
 
-
   for (let y in slideData) {
     slidetag += `<div class="carousel-item ${y == 0 ? 'active' : '' }">
-        <img src="${slideData[y].img}" alt="${slideData[y].alt}">
+        <video src="${slideData[y].video}" alt="${slideData[y].alt}" autoplay loop muted></video>
         <div class="carousel-container container-xl">
           <h2>${slideData[y].h2text}</h2>
           <p>${slideData[y].ptext}</p>
@@ -36,7 +45,6 @@ for (let i = 0; i < slideData.length; i++) {
 }
 
 indicators.innerHTML = indicatorTags;
-
 
     setTimeout(function() {
       var myCarousel = new bootstrap.Carousel(document.getElementById('hero-carousel'), {

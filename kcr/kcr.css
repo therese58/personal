@@ -1,3 +1,49 @@
 #header > div {
   gap:100px
 }
+
+.fixed-form {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000; /* 검은 배경색 */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000; /* 다른 요소들 위에 고정 */
+}
+
+.fixed-form form {
+  display: flex;
+  gap: 10px;
+}
+
+.fixed-form input {
+  border-radius: 8px;
+}
+
+.fixed-form input[type="text"], 
+.fixed-form button {
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.fixed-form input[type="checkbox"] {
+  margin-left: 10px;
+}
+
+.fixed-form .online-form button[type=submit] {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border: 0;
+  padding: 8px 20px;
+  transition: 0.5s;
+  border-radius: 4px;
+}
+
+.fixed-form .online-form button[type=submit]:hover {
+  background: color-mix(in srgb, var(--accent-color) 90%, black 15%);
+}
